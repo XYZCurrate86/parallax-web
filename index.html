@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
     <meta charset="UTF-8" />
     <title>Parallax Test</title>
@@ -15,7 +16,42 @@
     </ul>
     </header>
     <section>
-        <img src
+        
+        <img src ="src/img/bigCloud.png" id="bigCloud">
+        <img src ="src/img/cloudDownLeft.png" id="cloudDownLeft">
+        <img src ="src/img/cloudUpLeft.png" id="cloudUpLeft">
+        <img src ="src/img/cloudUpRight.png" id="cloudUpRight">
+        <img src ="src/img/mountainback.png" id="mountainBack">
+        <h2 id="text">LOREM IPSUM</h2>
+        <a href="#section" id="btn">Explore</a>
+        <img src ="src/img/bush.png" id="bush">
+        <img src ="src/img/pebbles.png" id="pebbles">
+        <img src ="src/img/redTower.png" id="redTower">
+        <img src ="src/img/treeLantern.png" id="treeLantern">
     </section>
+    <div class="sec" id="section">
+        <h2>Lorem Ipsum Sit Amet</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.
+        <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae?</p>
+    </div>
+
+    <script>
+        let bigCloud = document.createElementById('bigCloud');
+        let cloudDownLeft = document.createElementById('cloudDownLeft');
+        let cloudUpLeft = document.createElementById('cloudUpLeft');
+        let cloudUpRight = document.createElementById('cloudUpRight');
+        let mountainBack = document.createElementById('mountainBack');
+        let text = document.createElementById('text');
+        let btn = document.createElementById('btn');
+        let bush = document.createElementById('bush');
+        let peebles = document.createElementById('peebles');
+        let redTower = document.createElementById('redTower');
+        let treeLantern = document.createElementById('treeLantern');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            cloudDownLeft.style.right = value + 'px';
+        })
+    </script>
 </body>
 </html>
