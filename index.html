@@ -10,7 +10,7 @@
     <header><a href="#" class="logo">Logo</a>
     <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#section">About</a></li>
         <li><a href="#">Work</a></li>
         <li><a href="#">Contacts</a></li>
     </ul>
@@ -31,26 +31,29 @@
     </section>
     <div class="sec" id="section">
         <h2>Lorem Ipsum Sit Amet</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.
-        <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laboriosam, repudiandae consequuntur ex accusamus voluptate minima iusto quas assumenda harum aliquid soluta obcaecati, asperiores non corrupti dolorum necessitatibus aliquam beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates, facere atque quo esse obcaecati aperiam sed doloremque, libero dolore mollitia blanditiis pariatur quibusdam a vitae ea ipsum fugit quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo labore dolore, quis libero commodi culpa iure, rerum, inventore adipisci asperiores. Ipsam animi sed quaerat dolorem ipsa possimus nemo optio.</p>
     </div>
 
     <script>
-        let bigCloud = document.createElementById('bigCloud');
-        let cloudDownLeft = document.createElementById('cloudDownLeft');
-        let cloudUpLeft = document.createElementById('cloudUpLeft');
-        let cloudUpRight = document.createElementById('cloudUpRight');
-        let mountainBack = document.createElementById('mountainBack');
-        let text = document.createElementById('text');
-        let btn = document.createElementById('btn');
-        let bush = document.createElementById('bush');
-        let peebles = document.createElementById('peebles');
-        let redTower = document.createElementById('redTower');
-        let treeLantern = document.createElementById('treeLantern');
+        let bigCloud = document.getElementById('bigCloud');
+        let cloudDownLeft = document.getElementById('cloudDownLeft');
+        let cloudUpLeft = document.getElementById('cloudUpLeft');
+        let cloudUpRight = document.getElementById('cloudUpRight');
+        let mountainBack = document.getElementById('mountainBack');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let bush = document.getElementById('bush');
+        let peebles = document.getElementById('peebles');
+        let redTower = document.getElementById('redTower');
+        let treeLantern = document.getElementById('treeLantern');
 
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
-            cloudDownLeft.style.right = value + 'px';
+            bigCloud.style.top = value * 0.50 + 'px';
+            cloudDownLeft.style.left = value * 0.50 + 'px';
+            cloudUpLeft.style.left = value * 1 + 'px';
+            cloudUpRight.style.right = value * 1 + 'px';
+            text.style.marginRight = value * 4 + 'px';
         })
     </script>
 </body>
